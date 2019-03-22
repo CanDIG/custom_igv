@@ -39903,7 +39903,7 @@ var igv = (function (igv) {
                     url: readURL,
                     fields: (self.includeCalls ? undefined : "nextPageToken,variants(id,variantSetId,names,referenceName,start,end,referenceBases,alternateBases,quality,filter,info)"),
                     body: {
-                        "variantSetIds": (Array.isArray(self.variantSetId) ? self.variantSetId : [self.variantSetId]),
+                        "variantSetId": (Array.isArray(self.variantSetId) ? self.variantSetId : self.variantSetId),
                         "callSetIds": (self.callSetIds ? self.callSetIds : undefined),
                         "referenceName": self.config.referenceName,
                         "start": Math.ceil(bpStart).toString(),
