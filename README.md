@@ -1,9 +1,9 @@
 # custom_igv
-A repo that has a number of custom igv.js files we use
+A repo that has several igv.js that are custom to our APIs
 
 ## To develop
 
-* Make sure you local node packages are recent enough to run babel
+* Make sure you local node packages are recent enough (8+) to run babel
 * `npm install @babel/preset-env --save-dev` 
 * `npm install babel-minify --save-dev`.
 
@@ -22,3 +22,6 @@ A repo that has a number of custom igv.js files we use
 
 * Q: Why do I need to use .babelrc to minify?
 * A: Since minify has `mangle` enabled by default, which might cause unexpected errors. Babel CLI isn't particular friendly in further config in its packages through cli parameters, so using the .babelrc is a better option here.
+
+* Q: Babel.js complains about Couldn't find intersection.
+* A: Specify `"builtIns": false,` in your `.babelrc`.
